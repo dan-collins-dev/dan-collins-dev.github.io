@@ -1,0 +1,34 @@
+---
+import Navigation from "./Navigation.astro";
+import Image from "astro/components/Image.astro";
+---
+<style>
+    div {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        margin-left: auto;
+        margin: auto;
+        max-width: 700px;
+    }
+
+    p {
+        text-align: center;
+        flex: 1;
+        font-size: 2rem;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+</style>
+
+<header>
+    <div>
+        <Image class="pixel-art" src="/site-favicon.ico" width="64" height="64" alt="some"/>
+        <p class="roboto-black">Dan Collins</p>
+        <nav>
+            <Navigation />
+        </nav>
+    </div>
+</header>
