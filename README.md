@@ -1,2 +1,2 @@
-# dan-collins-dev.github.io
-
+# Personal Site and Blog
+Currently in development

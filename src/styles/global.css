@@ -24,6 +24,12 @@ main {
     image-rendering: crisp-edges;
 }
 
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .nav-link {
     color: white;
     text-decoration: none;

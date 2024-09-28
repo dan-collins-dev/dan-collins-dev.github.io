@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+---
+
+<style>
+    div {
+        /* border: 0.125rem solid black; */
+        flex: 1;
+        margin-left: auto;
+        margin-right: auto;
+        /* padding: 1rem; */
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        flex: 1;
+        /* align-self: flex-start; */
+        margin: .25rem;
+    }
+
+    .profile-image {
+        border-radius: 0.5rem;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        /* height: auto; */
+    }
+
+    @media (width >= 425px) {
+        /* div {
+            flex-direction: row;
+        } */
+    }
+</style>
+<div>
+    <Image
+        class="profile-image"
+        src="/profilePic.jpg"
+        width="256"
+        height="256 "
+        alt="d"
+    />
+
+    <p class="roboto-regular">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente dolorum dolores! Incidunt cumque neque quis explicabo dolorem provident minus ducimus. Perferendis veritatis velit cupiditate possimus laboriosam sit eos nemo!
+    </p>
+    <p class="roboto-regular">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem quam harum animi quos doloremque deleniti suscipit explicabo adipisci asperiores fuga quae a repudiandae et, ab quod placeat nemo enim?
+    </p>
+</div>
