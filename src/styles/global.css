@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    /* background-color: black; */
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -121,5 +125,19 @@ footer {
 @media (width < 500px) {
     .press-start-2p-regular {
         scale: 80%;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: black;
+        color: white;
     }
 }
