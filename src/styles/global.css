@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+    background-color: rgb(30, 151, 226);
 }
 
 header {
@@ -115,4 +116,10 @@ footer {
     font-family: "Roboto", system-ui;
     font-weight: 900;
     font-style: italic;
+}
+
+@media (width < 500px) {
+    .press-start-2p-regular {
+        scale: 80%;
+    }
 }
