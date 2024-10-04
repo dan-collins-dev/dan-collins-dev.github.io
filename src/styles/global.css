@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-html {
-    /* background-color: black; */
-}
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background-color: rgb(30, 151, 226);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
 }
 
 header {
@@ -23,18 +22,6 @@ main {
     flex: 1;
 }
 
-.pixel-art {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-}
-
-.press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .nav-link {
     color: white;
     text-decoration: none;
@@ -42,12 +29,6 @@ main {
 
 .nav-link:hover {
     color: black;
-}
-
-header,
-footer {
-    background-color: blue;
-    color: white;
 }
 
 .roboto-thin {
@@ -123,9 +104,6 @@ footer {
 }
 
 @media (width < 500px) {
-    .press-start-2p-regular {
-        scale: 80%;
-    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -137,7 +115,7 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: black;
+        background-color: hsl(214, 47%, 6%);
         color: white;
     }
 }
