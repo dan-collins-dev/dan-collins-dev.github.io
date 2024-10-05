@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html {
+    background-color: hsl(214, 47%, 6%);
+}
 body {
     display: flex;
     flex-direction: column;

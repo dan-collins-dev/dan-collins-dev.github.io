@@ -1,34 +1,16 @@
 ---
 import Navigation from "./Navigation.astro";
-import Image from "astro/components/Image.astro";
 ---
+
 <style>
-    div {
-        display: flex;
-        /* flex-direction: column; */
-        align-items: center;
-        margin-left: auto;
-        margin: auto;
-        max-width: 700px;
-    }
-
-    p {
-        text-align: center;
-        flex: 1;
-        /* font-size: 2rem; */
-    }
-
-    nav {
-        margin-left: auto;
+    header {
+        margin-bottom: .5rem;
+        padding: .25rem;
+        max-width: 500px;
     }
 </style>
-
 <header>
-    <div>
-        <Image class="pixel-art" src="/computer-sprite.png" width="64" height="64" alt="some"/>
-        <p class="press-start-2p-regular">Dan Collins</p>
-        <nav>
-            <Navigation />
-        </nav>
-    </div>
+    <nav>
+        <Navigation />
+    </nav>
 </header>
