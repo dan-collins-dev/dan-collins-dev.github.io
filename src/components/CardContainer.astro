@@ -1,9 +1,11 @@
 ---
 import ProfileCard from "./ProfileCard.astro"
 import SkillsCard from "./SkillsCard.astro"
+import AboutMeCard from "./AboutMeCard.astro"
 ---
 <section>
     <ProfileCard />
+    <AboutMeCard />
     <SkillsCard />
 </section>
 
@@ -12,9 +14,7 @@ import SkillsCard from "./SkillsCard.astro"
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* background-color: hsl(238, 21%, 23%); */
         border-radius: 0.5rem;
-        /* max-width: 500px; */
         color: white;
         gap: 1rem;
     }
@@ -22,7 +22,7 @@ import SkillsCard from "./SkillsCard.astro"
     @media (width >= 700px) {
         section {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: normal;
         }
     }
 </style>
