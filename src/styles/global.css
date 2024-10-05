@@ -12,7 +12,7 @@ body {
     min-height: 100dvh;
     margin: 0 auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 1200px;
     padding: 1rem;
 }
 
@@ -108,7 +108,7 @@ main {
 @media (width < 500px) {
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     html {
         background-color: white;
         color: black;
@@ -120,4 +120,4 @@ main {
         background-color: hsl(214, 47%, 6%);
         color: white;
     }
-}
+} */

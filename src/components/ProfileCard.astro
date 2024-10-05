@@ -1,0 +1,46 @@
+---
+const imgSrc = "/profilePic.jpg";
+const imgAlt = "A Photo of Dan Collins";
+---
+<style>
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.25rem;
+        margin: 0.25rem;
+        background-color: hsl(238, 21%, 23%);
+        border-radius: 0.5rem;
+        max-width: 500px;
+        color: white;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    .img-container {
+        padding: 1rem;
+        max-width: 200px;
+    }
+
+    p {
+        margin: 0.25rem 0;
+        padding: 0.25rem 1rem;
+        text-align: center;
+    }
+</style>
+
+<article>
+    <div class="img-container">
+        <img src={imgSrc} alt={imgAlt} />
+    </div>
+    <h1 class="roboto-bold">Dan Collins</h1>
+
+    <p class="roboto-thin"></p>
+    <p class="roboto-regular">
+        I'm not a programmer. I'm a <em>problem solver</em>.
+    </p>
+    <p class="roboto-thin">I just happen to solve problems with code.</p>
+</article>
