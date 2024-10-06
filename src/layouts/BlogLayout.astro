@@ -1,8 +1,8 @@
 ---
-import HomeLayout from "./HomeLayout.astro";
+import HomeLayout from "./BaseLayout.astro";
 const {frontmatter} = Astro.props;
 ---
-<HomeLayout pageTitle="FUC">
+<HomeLayout pageTitle="Test">
 
     <h1>{frontmatter.title}</h1>
     <p>Written by {frontmatter.author}</p>
