@@ -16,10 +16,6 @@ body {
     display: flex;
 }
 
-header {
-    padding: 0rem;
-}
-
 main {
     display: flex;
     flex-direction: column;
