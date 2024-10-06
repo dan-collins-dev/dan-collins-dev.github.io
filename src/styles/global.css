@@ -23,7 +23,7 @@ main {
 }
 
 footer {
-    margin-top: auto;
+    /* margin-top: auto; */
     background-color: hsl(238, 21%, 23%);
     color: white;
 }
