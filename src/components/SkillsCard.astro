@@ -3,36 +3,37 @@ import SkillIcons from "./SkillIcons.astro";
 ---
 
 <article class="skills-card">
-    <h2>Skills</h2>
+    <h2 class="skills-card__label">Skills</h2>
     <SkillIcons />
 </article>
 
 <style>
-    h2 {
-        color: white;
-        padding: 1rem;
-    }
-
     .skills-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* padding: 0.25rem; */
-        margin: 0.25rem;
-        /* margin-top: 1rem; */
+        /* margin: 0.25rem; */
+        margin-bottom: 1rem;
         background-color: hsl(238, 21%, 23%);
-        border-radius: 0.5rem;
         width: 100%;
         color: white;
         max-height: 200px;
         background-color: hsl(240, 9%, 25%);
+        grid-area: skills;
+    }
+    
+    .skills-card__label {
+        color: white;
+        padding: 1rem;
     }
 
-    @media (width >= 700px) {
+    
+
+    /* @media (width >= 700px) {
         .skills-card {
             flex-direction: column;
             width: 20%;
             max-height: none;
         }
-    }
+    } */
 </style>
