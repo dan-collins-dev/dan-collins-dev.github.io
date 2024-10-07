@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob('./posts/*.mdx');
+import BlogPost from "../components/BlogPost.astro";
+import RecentPosts from "../components/RecentPosts.astro";
+const allPosts = await Astro.glob("./posts/*.mdx");
 const pageTitle = "Dan Collins | Blog";
 ---
 
@@ -14,10 +16,15 @@ const pageTitle = "Dan Collins | Blog";
                 as well as web development.
             </p>
         </article>
+        <RecentPosts />
     </div>
-    <ul>
-        {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-    </ul>
+    <!-- <ul>
+        {
+            allPosts.map((post) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} />
+            ))
+        }
+    </ul> -->
 </BaseLayout>
 
 <style>
@@ -48,8 +55,8 @@ const pageTitle = "Dan Collins | Blog";
         grid-template-rows: auto;
         grid-template-areas:
             "prof"
-            "about"
-            "skills";
+            "recent"
+            ".";
         gap: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;

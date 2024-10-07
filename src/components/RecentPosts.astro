@@ -1,0 +1,37 @@
+---
+import BlogPost from "./BlogPost.astro"
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+---
+<article class="recent-posts">
+    <h2 class="roboto-bold">Recent Posts</h2>
+    <ul>
+        {
+            allPosts.map((post) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} />
+            ))
+        }
+    </ul>
+</article>
+
+<style>
+    .recent-posts {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0.25rem;
+        background-color: hsl(240, 9%, 25%);
+        width: 100%;
+        justify-content: center;
+        grid-area: recent;
+        color: white;
+    }
+
+    h2 {
+        align-self: center;
+        padding: 1rem;
+    }
+
+    ul {
+        list-style: none;
+    }
+</style>
