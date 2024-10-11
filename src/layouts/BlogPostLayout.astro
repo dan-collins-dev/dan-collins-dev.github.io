@@ -1,0 +1,86 @@
+---
+// import BlogContent from "../components/blog/BlogContent.astro";
+// import Test from "../components/blog/Test.astro";
+import HomeLayout from "./BaseLayout.astro";
+const { frontmatter, compiledContent } = Astro.props;
+---
+
+<HomeLayout pageTitle=`Dan Collins | ${frontmatter.title}`>
+    <section class="grid">
+        <article class="blog-card">
+            <h1 class="blog-label roboto-bold">{frontmatter.title}</h1>
+            <p class="roboto-thin">Written by {frontmatter.author}</p>
+            <p class="roboto-thin">
+                Date Published: {frontmatter.datePublished}
+            </p>
+        </article>
+        <div class="content-card roboto-thin">
+            <slot />
+        </div>
+    </section>
+</HomeLayout>
+<style is:global>
+    .blog-label {
+        padding: 0.5rem;
+    }
+
+    .content-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: hsl(240, 9%, 25%);
+        width: 100%;
+        line-height: 2rem;
+        justify-content: center;
+        grid-area: content;
+        color: white;
+    }
+
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: hsl(240, 9%, 25%);
+        width: 100%;
+        justify-content: center;
+        grid-area: blog;
+        color: white;
+        line-height: 2rem;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat (12, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "blog"
+            "content";
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    ol {
+        padding: 0.5rem;
+    }
+
+    li {
+        font-size: 1em;
+    }
+
+    strong {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    h6 {
+        font-size: 0.67em;
+    }
+</style>

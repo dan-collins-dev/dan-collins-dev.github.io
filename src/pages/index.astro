@@ -1,57 +1,10 @@
 ---
-import ProfileCard from "../components/ProfileCard.astro";
-import SkillIcons from "../components/SkillIcons.astro"
-import SkillsCard from "../components/SkillsCard.astro";
-import HomeLayout from "../layouts/HomeLayout.astro";
-import CardContainer from "../components/CardContainer.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Dan Collins";
-import Header from "../components/Header.astro";
-import AboutMeCard from "../components/AboutMeCard.astro";
+import HomeComponent from "../components/HomeComponent.astro";
+
 ---
-<HomeLayout pageTitle={pageTitle}>
-    <div class="grid">
-        <ProfileCard />
-        <AboutMeCard />
-        
-        <SkillsCard />
-    </div>
-    <!-- <section class="grid">
-        <div class="item-1"><Header /></div>
-        <div class="item-2">2</div>
-        <div class="item-3">3</div>
-        <div class="item-4">4</div>
-    </section> -->
-</HomeLayout>
+<BaseLayout pageTitle={pageTitle}>
+    <HomeComponent />
+</BaseLayout>
 
-<style>
-    * {
-        color: white;
-    }
-
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat (12, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "prof"
-        "about"
-        "skills";
-        gap: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    
-    @media (width >= 700px) {
-        .grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: 
-            "prof prof about about"
-            "prof prof skills skills"
-            ". . . .";
-        }
-    }
-    
-</style>
