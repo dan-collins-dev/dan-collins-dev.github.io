@@ -1,0 +1,38 @@
+---
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+let recentPost = allPosts[allPosts.length -1]
+---
+<article class="latest-post">
+    <h2 class="latest-post__label">Latest Post</h2>
+    <a href={recentPost.url}>{recentPost.frontmatter.title}</a>
+    <p>{recentPost.frontmatter.description}</p>
+</article>
+
+<style>
+    .latest-post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.25rem;
+        margin-bottom: 1rem;
+        background-color: hsl(240, 9%, 25%);
+        width: 100%;
+        color: white;
+        grid-area: latest;
+    }
+    
+    .skills-card__label {
+        color: white;
+        padding: 1rem;
+    }
+
+    
+
+    /* @media (width >= 700px) {
+        .skills-card {
+            flex-direction: column;
+            width: 20%;
+            max-height: none;
+        }
+    } */
+</style>

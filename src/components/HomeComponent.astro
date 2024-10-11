@@ -2,11 +2,14 @@
 import ProfileCard from "../components/ProfileCard.astro";
 import SkillsCard from "../components/SkillsCard.astro";
 import AboutMeCard from "../components/AboutMeCard.astro";
+import LatestPost from "./LatestPost.astro";
 ---
 <div class="grid">
     <ProfileCard />
     <AboutMeCard />   
     <SkillsCard />
+    <LatestPost />
+
 </div>
 <!-- <section class="grid">
     <div class="item-1"><Header /></div>
@@ -23,12 +26,13 @@ import AboutMeCard from "../components/AboutMeCard.astro";
 
     .grid {
         display: grid;
-        grid-template-columns: repeat (12, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
         "prof"
         "about"
-        "skills";
+        "skills"
+        "latest";
         gap: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -37,12 +41,12 @@ import AboutMeCard from "../components/AboutMeCard.astro";
     
     @media (width >= 700px) {
         .grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr 2fr ;
             grid-template-areas: 
             "prof prof about about"
             "prof prof skills skills"
-            ". . . .";
+            "latest . . .";
         }
     }
     
