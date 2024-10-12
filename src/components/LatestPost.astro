@@ -1,6 +1,7 @@
 ---
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
-let recentPost = allPosts[allPosts.length - 1];
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+let recentPost = allPosts[0];
 ---
 
 <article class="latest-post">

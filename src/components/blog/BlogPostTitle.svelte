@@ -1,7 +1,7 @@
 <script>
     export let frontmatter;
-    const {title, description, author, pubDate} = frontmatter;
-    const date = new Date(pubDate); 
+    const { title, author, pubDate } = frontmatter;
+    const date = new Date(pubDate);
 </script>
 
 <article class="blog-card">

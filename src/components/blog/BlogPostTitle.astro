@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 ---
+
 <article class="blog-card">
     <h1 class="blog-label roboto-bold">{frontmatter.title}</h1>
     <p class="roboto-thin">Written by {frontmatter.author}</p>
@@ -8,7 +9,6 @@ const { frontmatter } = Astro.props;
         Date Published: {frontmatter.datePublished}
     </p>
 </article>
-
 
 <style>
     .blog-card {
