@@ -1,11 +1,16 @@
 ---
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
-let recentPost = allPosts[allPosts.length -1]
+let recentPost = allPosts[allPosts.length - 1];
 ---
+
 <article class="latest-post">
     <h2 class="latest-post__label">Latest Post</h2>
-    <a href={recentPost.url}>{recentPost.frontmatter.title}</a>
-    <p>{recentPost.frontmatter.description}</p>
+    <div class="latest-post__content">
+        <a class="roboto-regular" href={recentPost.url}
+            >{recentPost.frontmatter.title}</a
+        >
+        <p class="roboto-thin description">{recentPost.frontmatter.description}</p>
+    </div>
 </article>
 
 <style>
@@ -17,21 +22,29 @@ let recentPost = allPosts[allPosts.length -1]
         background-color: hsl(240, 9%, 25%);
         width: 100%;
         color: white;
-        grid-area: latest;
+        box-shadow: inset 0px 0px 10px 0px rgba(222, 166, 166, 0.762);
     }
-    
-    .skills-card__label {
+
+    .latest-post__label {
         color: white;
         padding: 1rem;
     }
 
-    
+    .latest-post__content {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        margin: 0.5rem;
+    }
 
-    /* @media (width >= 700px) {
-        .skills-card {
-            flex-direction: column;
-            width: 20%;
-            max-height: none;
-        }
-    } */
+    a {
+        font-size: 1.5rem;
+        align-self: center;
+        padding: 0.5rem;
+    }
+
+    .description {
+        align-self: flex-start;
+        padding: 0.5rem;
+    }
 </style>

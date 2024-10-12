@@ -1,0 +1,28 @@
+---
+import ProfileCard from "./ProfileCard.astro";
+import SkillsCard from "./SkillsCard.astro";
+import AboutMeCard from "./AboutMeCard.astro";
+import LatestPost from "../LatestPost.astro";
+---
+<div class="home-component">
+    <ProfileCard />
+    <AboutMeCard />   
+    <SkillsCard />
+    <LatestPost />
+</div>
+
+<style>
+    * {
+        color: white;
+    }
+
+
+    .home-component {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex: 1;
+    } 
+</style>
