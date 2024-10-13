@@ -1,7 +1,7 @@
 ---
 import BlogPost from "./BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
-const recentPosts = allPosts.slice(allPosts.length - 3).reverse();
+// const recentPosts = allPosts.slice(allPosts.length - 3).reverse();
 ---
 
 <article class="recent-posts">

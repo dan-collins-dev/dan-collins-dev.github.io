@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 <HomeLayout pageTitle=`Dan Collins | ${frontmatter.title}`>
     <section class="blog-post-container">
         <BlogPostTitle {frontmatter} />
-        <div class="content-card roboto-thin">
+        <div class="panel content-card roboto-thin">
             <slot />
         </div>
     </section>
@@ -18,16 +18,16 @@ const { frontmatter } = Astro.props;
     }
 
     .content-card {
-        display: flex;
-        flex-direction: column;
         padding: 1rem;
-        background-color: hsl(240, 9%, 25%);
         width: 100%;
         line-height: 2rem;
-        justify-content: center;
-        grid-area: content;
-        color: white;
-        box-shadow: inset 0px 0px 10px 0px rgba(222, 166, 166, 0.762);
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    code {
+        background-color: hsl(214, 47%, 6%);
+        padding: .25rem;
     }
 
     .blog-card {

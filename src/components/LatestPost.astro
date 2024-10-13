@@ -1,31 +1,25 @@
 ---
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
-allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+allPosts.sort(
+    (a, b) =>
+        Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)
+);
 let recentPost = allPosts[0];
 ---
 
-<article class="latest-post">
+<article class="panel">
     <h2 class="latest-post__label">Latest Post</h2>
     <div class="latest-post__content">
         <a class="roboto-regular" href={recentPost.url}
             >{recentPost.frontmatter.title}</a
         >
-        <p class="roboto-thin description">{recentPost.frontmatter.description}</p>
+        <p class="roboto-thin description">
+            {recentPost.frontmatter.description}
+        </p>
     </div>
 </article>
 
 <style>
-    .latest-post {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.25rem;
-        background-color: hsl(240, 9%, 25%);
-        width: 100%;
-        color: white;
-        box-shadow: inset 0px 0px 10px 0px rgba(222, 166, 166, 0.762);
-    }
-
     .latest-post__label {
         color: white;
         padding: 1rem;
